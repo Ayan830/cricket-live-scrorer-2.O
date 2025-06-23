@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gully Cricket Live Score</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 Gully Cricket Live Score</h1>
+
+    <div class="teams">
+      <!-- Team A -->
+      <div class="team">
+        <h2 contenteditable="true" id="teamNameA" oninput="saveData()">Team A</h2>
+        <p>Runs: <span id="runsA">0</span> / Wickets: <span id="wicketsA">0</span></p>
+        <p>4s: <span id="foursA">0</span> | 6s: <span id="sixesA">0</span></p>
+
+        <!-- ⭐ Current Batsmen Display -->
+        <div id="currentBatsmenA" style="background:#f0f0f0; padding:10px; border-radius:10px; margin-bottom:10px;">
+          <h3>⭐ Current Batsmen</h3>
+          <p><strong>Striker:</strong> <span id="strikerNameA">-</span></p>
+          <p><strong>Non-Striker:</strong> <span id="nonStrikerNameA">-</span></p>
+        </div>
+
+        <!-- 🎯 Dropdowns -->
+        <label>🎯 Select Striker:</label>
+        <select id="strikerA" onchange="setStriker('A')">
+          <option value="">Select</option>
+          <option value="0">Player A1</option>
+          <option value="1">Player A2</option>
+          <option value="2">Player A3</option>
+          <option value="3">Player A4</option>
+          <option value="4">Player A5</option>
+          <option value="5">Player A6</option>
+          <option value="6">Player A7</option>
+          <option value="7">Player A8</option>
+          <option value="8">Player A9</option>
+          <option value="9">Player A10</option>
+          <option value="10">Player A11</option>
+        </select><br/>
+
+        <label>🎯 Select Non-Striker:</label>
+        <select id="nonStrikerA" onchange="setNonStriker('A')">
+          <option value="">Select</option>
+          <option value="0">Player A1</option>
+          <option value="1">Player A2</option>
+          <option value="2">Player A3</option>
+          <option value="3">Player A4</option>
+          <option value="4">Player A5</option>
+          <option value="5">Player A6</option>
+          <option value="6">Player A7</option>
+          <option value="7">Player A8</option>
+          <option value="8">Player A9</option>
+          <option value="9">Player A10</option>
+          <option value="10">Player A11</option>
+        </select>
+
+        <!-- 👥 Other Players -->
+        <h3>🧑‍🤝‍🧑 Other Players</h3>
+        <ul id="playersA" contenteditable="true" oninput="saveData()">
+          <li>Player A1 🏏</li>
+          <li>Player A2 🏏</li>
+          <li>Player A3 🏏</li>
+          <li>Player A4 🏏</li>
+          <li>Player A5 🏏</li>
+          <li>Player A6 🏐</li>
+          <li>Player A7 🏐</li>
+          <li>Player A8 🏐</li>
+          <li>Player A9 🏐</li>
+          <li>Player A10 🏐</li>
+          <li>Player A11 🏐</li>
+        </ul>
+      </div>
+
+      <!-- Team B -->
+      <div class="team">
+        <h2 contenteditable="true" id="teamNameB" oninput="saveData()">Team B</h2>
+        <p>Runs: <span id="runsB">0</span> / Wickets: <span id="wicketsB">0</span></p>
+        <p>4s: <span id="foursB">0</span> | 6s: <span id="sixesB">0</span></p>
+
+        <!-- ⭐ Current Batsmen Display -->
+        <div id="currentBatsmenB" style="background:#f0f0f0; padding:10px; border-radius:10px; margin-bottom:10px;">
+          <h3>⭐ Current Batsmen</h3>
+          <p><strong>Striker:</strong> <span id="strikerNameB">-</span></p>
+          <p><strong>Non-Striker:</strong> <span id="nonStrikerNameB">-</span></p>
+        </div>
+
+        <!-- 🎯 Dropdowns -->
+        <label>🎯 Select Striker:</label>
+        <select id="strikerB" onchange="setStriker('B')">
+          <option value="">Select</option>
+          <option value="0">Player B1</option>
+          <option value="1">Player B2</option>
+          <option value="2">Player B3</option>
+          <option value="3">Player B4</option>
+          <option value="4">Player B5</option>
+          <option value="5">Player B6</option>
+          <option value="6">Player B7</option>
+          <option value="7">Player B8</option>
+          <option value="8">Player B9</option>
+          <option value="9">Player B10</option>
+          <option value="10">Player B11</option>
+        </select><br/>
+
+        <label>🎯 Select Non-Striker:</label>
+        <select id="nonStrikerB" onchange="setNonStriker('B')">
+          <option value="">Select</option>
+          <option value="0">Player B1</option>
+          <option value="1">Player B2</option>
+          <option value="2">Player B3</option>
+          <option value="3">Player B4</option>
+          <option value="4">Player B5</option>
+          <option value="5">Player B6</option>
+          <option value="6">Player B7</option>
+          <option value="7">Player B8</option>
+          <option value="8">Player B9</option>
+          <option value="9">Player B10</option>
+          <option value="10">Player B11</option>
+        </select>
+
+        <!-- 👥 Other Players -->
+        <h3>🧑‍🤝‍🧑 Other Players</h3>
+        <ul id="playersB" contenteditable="true" oninput="saveData()">
+          <li>Player B1 🏏</li>
+          <li>Player B2 🏏</li>
+          <li>Player B3 🏏</li>
+          <li>Player B4 🏏</li>
+          <li>Player B5 🏏</li>
+          <li>Player B6 🏐</li>
+          <li>Player B7 🏐</li>
+          <li>Player B8 🏐</li>
+          <li>Player B9 🏐</li>
+          <li>Player B10 🏐</li>
+          <li>Player B11 🏐</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="text-align:center;">Overs: <span id="overs">0.0</span></p>
+
+    <div class="score-buttons">
+      <h3>🏏 Add Runs (Team A)</h3>
+      <button onclick="addCustomRun('A', 0)">0</button>
+      <button onclick="addCustomRun('A', 1)">+1</button>
+      <button onclick="addCustomRun('A', 2)">+2</button>
+      <button onclick="addCustomRun('A', 3)">+3</button>
+      <button onclick="addFour('A')">+4</button>
+      <button onclick="addSix('A')">+6</button>
+      <button onclick="addWicket('A')">Wicket</button>
+
+      <h3>🏏 Add Runs (Team B)</h3>
+      <button onclick="addCustomRun('B', 0)">0</button>
+      <button onclick="addCustomRun('B', 1)">+1</button>
+      <button onclick="addCustomRun('B', 2)">+2</button>
+      <button onclick="addCustomRun('B', 3)">+3</button>
+      <button onclick="addFour('B')">+4</button>
+      <button onclick="addSix('B')">+6</button>
+      <button onclick="addWicket('B')">Wicket</button>
+
+      <h3>⏱ Add Ball</h3>
+      <button onclick="addBall()">+1 Ball</button>
+    </div>
+
+    <p id="status">📡 Live local score only</p>
+
+    <div style="text-align:center;">
+      <button onclick="resetMatch()" class="reset">Reset Match</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

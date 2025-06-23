@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  color: #0d47a1;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2, h3 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1565c0;
+  border-bottom: 2px solid #bbdefb;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.team {
+  flex: 1;
+  background-color: #f0f8ff;
+  padding: 18px;
+  border-radius: 12px;
+  min-width: 280px;
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.1);
+  transition: transform 0.2s;
+}
+.team:hover {
+  transform: translateY(-3px);
+}
+
+.team p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  background-color: #e3f2fd;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  font-weight: 500;
+}
+
+li:hover {
+  background-color: #bbdefb;
+}
+
+button {
+  padding: 10px 14px;
+  margin: 6px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+.reset {
+  background-color: #e53935;
+  margin-top: 25px;
+}
+
+.reset:hover {
+  background-color: #c62828;
+}
+
+#status {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #444;
+}
+
+.score-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+select {
+  padding: 8px 10px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+  background-color: #f8f9fa;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  color: #0d47a1;
+}
+
+#currentBatsmenA, #currentBatsmenB {
+  border-left: 4px solid #0d47a1;
+  background-color: #e3f2fd;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+#currentBatsmenA:hover,
+#currentBatsmenB:hover {
+  background-color: #bbdefb;
+}
+
+@media (max-width: 768px) {
+  .teams {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 45%;
+    margin: 6px auto;
+  }
+}
